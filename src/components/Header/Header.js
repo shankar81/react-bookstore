@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styles from "./Header.css";
 import { Link } from "react-router-dom";
+import DrawerIcon from "../DrawerIcon/DrawerIcon";
 
 class Header extends Component {
   render() {
@@ -8,9 +9,13 @@ class Header extends Component {
       <div className={styles.container}>
         <div className={styles.headerRow}>
           <div className={styles.headerLeft}>
-            <svg onClick={this.props.onPress} className={styles.drawerIcon}>
+            <DrawerIcon
+              onPress={this.props.onPress}
+              visible={this.props.visible}
+            />
+            {/* <svg onClick={this.props.onPress} className={styles.drawerIcon}>
               <use href="../assets/icons/landing-icons.svg#menu-1" />
-            </svg>
+            </svg> */}
             <Link to="/" className={styles.brand}>
               <h1 className={styles.title}>Pustaka</h1>
               <h2 className={styles.subtitle}>just another tokomo site</h2>

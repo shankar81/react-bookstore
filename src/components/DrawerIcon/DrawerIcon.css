@@ -1,0 +1,50 @@
+.container {
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.line1,
+.line2,
+.line3 {
+    background-color: #333;
+    width: 1.5rem;
+    height: 3px;
+    margin-right: 1rem;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.line1Active {
+  background-color: #333;
+  width: 1.5rem;
+  height: 3px;
+  margin-right: 1rem;
+  transform: rotate(40deg) translate(3px, 3px);
+  transition: all 0.3s;
+}
+
+.line2Active {
+  background-color: #333;
+  width: 1.5rem;
+  height: 3px;
+  margin-right: 1rem;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.line3Active {
+  background-color: #333;
+  width: 1.5rem;
+  height: 3px;
+  margin-right: 1rem;
+  transform: rotate(-40deg) translate(1px, -2px);
+  transition: all 0.3s;
+}
+
+.line1,
+.line2 {
+  margin-bottom: 0.3rem;
+}
+

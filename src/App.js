@@ -20,15 +20,25 @@ class App extends Component {
   };
 
   onOpenDrawer = () => {
-    this.setState({ isDrawerOpen: true });
+    if (this.state.isDrawerOpen) {
+      this.setState({ isDrawerOpen: false });
+    } else {
+      this.setState({ isDrawerOpen: true });
+    }
   };
   render() {
     return (
       <Router>
         <div className="container">
           <Drawer visible={this.state.isDrawerOpen} />
-          <Backdrop visible={this.state.isDrawerOpen} onPress={this.onCloseDrawer} />
-          <Header onPress={this.onOpenDrawer} />
+          <Backdrop
+            visible={this.state.isDrawerOpen}
+            onPress={this.onCloseDrawer}
+          />
+          <Header
+            visible={this.state.isDrawerOpen}
+            onPress={this.onOpenDrawer}
+          />
           <Switch>
             <Route path="/" component={Landing} />
           </Switch>
