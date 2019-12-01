@@ -8,7 +8,7 @@ class Header extends Component {
       <div className={styles.container}>
         <div className={styles.headerRow}>
           <div className={styles.headerLeft}>
-            <svg className={styles.drawerIcon}>
+            <svg onClick={this.props.onPress} className={styles.drawerIcon}>
               <use href="../assets/icons/landing-icons.svg#menu-1" />
             </svg>
             <Link to="/" className={styles.brand}>
@@ -29,8 +29,12 @@ class Header extends Component {
               </svg>
             </div>
           </div>
-          <Link to="login" className={styles.link}>Log In</Link>
-          <Link to="register" className={styles.link}>Cart</Link>
+          <Link to="login" className={styles.link}>
+            Log In
+          </Link>
+          <Link to="register" className={styles.link}>
+            Cart
+          </Link>
         </div>
       </div>
     );

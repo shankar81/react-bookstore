@@ -1,0 +1,48 @@
+.container {
+  color: #333;
+  background-color: #fff;
+  margin-top: 16.87vh;
+  position: fixed;
+  top: 0;
+  left: 6vw;
+  z-index: 100;
+}
+
+.list {
+  list-style: none;
+}
+
+.item {
+  padding: 1rem 2rem;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+.item:hover {
+  background-color: salmon;
+}
+
+.item:hover > .icon {
+  fill: #f9f9f9;
+}
+
+.item:hover > .title {
+  color: #f9f9f9;
+}
+
+.icon {
+  height: 1.2rem;
+  width: 1.2rem;
+  fill: #333;
+  margin-right: 2rem;
+  transition: all 0.3s;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: normal;
+  transition: all 0.3s;
+}
