@@ -1,0 +1,49 @@
+.container {
+  margin-top: 17vh;
+  background-image: linear-gradient(
+      to left,
+      rgba(253, 121, 168, 0.3),
+      rgba(162, 155, 254, 0.3)
+    ),
+    url(../../img/hero1.jpg);
+  height: 100vh;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  height: 100%;
+  width: 100%;
+  padding: 4rem 8rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+.para {
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.posters {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image {
+}

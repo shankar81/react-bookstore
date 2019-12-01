@@ -1,39 +1,36 @@
 import React, { Component } from "react";
-import "./Header.css";
+import styles from "./Header.css";
+import { Link } from "react-router-dom";
 
 class Header extends Component {
   render() {
     return (
-      <div className="container">
-        <div className="headerRow">
-          <div className="headerLeft">
-            <svg className="drawerIcon">
+      <div className={styles.container}>
+        <div className={styles.headerRow}>
+          <div className={styles.headerLeft}>
+            <svg className={styles.drawerIcon}>
               <use href="../assets/icons/landing-icons.svg#menu-1" />
             </svg>
-            <div className="brand">
-              <h1 className="title">Pustaka</h1>
-              <h2 className="subtitle">just another tokomo site</h2>
-            </div>
+            <Link to="/" className={styles.brand}>
+              <h1 className={styles.title}>Pustaka</h1>
+              <h2 className={styles.subtitle}>just another tokomo site</h2>
+            </Link>
           </div>
-          <div className="searchContainer">
+          <div className={styles.searchContainer}>
             <input
               placeholder="Type to search and hit enter"
               type="text"
-              className="form-input"
+              className={styles.formInput}
             />
-            <div className="bottomLine" />
-            <div className="searchIconContainer">
-              <svg className="searchIcon">
+            <div className={styles.bottomLine} />
+            <div className={styles.searchIconContainer}>
+              <svg className={styles.searchIcon}>
                 <use href="../assets/icons/landing-icons.svg#magnifying-glass" />
               </svg>
             </div>
           </div>
-          <a href="" className="link">
-            Log In
-          </a>
-          <a href="" className="link">
-            Cart
-          </a>
+          <Link to="login" className={styles.link}>Log In</Link>
+          <Link to="register" className={styles.link}>Cart</Link>
         </div>
       </div>
     );
